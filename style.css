@@ -1,24 +1,24 @@
-* {
+*{
   color: #515076;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  }
+}
 
-  .all-elements {
+.all-elements {
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin: auto;
   width: 1110px;
-  }
+}
 
-  .product-card__bg {
-    background-image:url("/images/bg-img-dandelions.png");
-    background-repeat: no-repeat;
-  }
+.product-card__bg {
+  background-image:url("/images/bg-img-dandelions.png");
+  background-repeat: no-repeat;
+}
 
-  .main-header {
+.main-header {
   text-align: center;
   margin: 220px auto 110px auto;
   height: 78px;
@@ -104,7 +104,7 @@
 }
 
 .color-toggle-button{
-   background-color: #F7F7FA;
+  background-color: #F7F7FA;
 }
 
 .color-toggle-button.changed{
