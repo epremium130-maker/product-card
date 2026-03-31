@@ -1,4 +1,4 @@
-*{
+* {
   color: #515076;
   box-sizing: border-box;
   margin: 0;
@@ -103,10 +103,10 @@
   font-size: 20px;
 }
 
-.color-toggle-button{
+.color-toggle-button {
   background-color: #F7F7FA;
 }
 
-.color-toggle-button.changed{
+.color-toggle-button.changed {
   background-color: #1fd6af;
 }
