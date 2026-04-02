@@ -35,10 +35,10 @@ function openGoogle() {
 
 // Функция выведения текста в консоль при наведении на заголовок
 
-const logHeaderTextContent = document.querySelector ('.main-header');
+const mainTitle = document.querySelector ('.main-header');
 
-logHeaderTextContent.addEventListener('mouseover', () => {
-  console.log(logHeaderTextContent.textContent);
+mainTitle.addEventListener('mouseover', () => {
+  console.log(mainTitle.textContent);
 });
 
 // Кнопка изменяющая цвет
