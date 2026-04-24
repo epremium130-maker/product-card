@@ -29,10 +29,10 @@ const toyota = 7000
 function calcBudget(budget) {
   if (budget >= toyota) {
     console.log('Toyota приобретена. Спасибо за покупку!');
-  } else 
+  } else {
     console.log(`Вам не хватает ${toyota - budget}$, пополните баланс`)
   }
-
+}
 calcBudget(5400)
 
 //6. Создать 1 функцию и именовать её по своему усмотрению
@@ -41,10 +41,10 @@ function sayBye(name) {
   console.log(`Goodbye ${name}`)
 }
 
-sayBye(EZ)
+sayBye('EZ')
 
 //7. Создать 3 переменных (без разницы каких) и именовать их по своему усмотрению
 
-var shoes = Li-Ning
-let size = 41
-const toUse = football
+var shoes = 'Li-Ning'
+let size = '41'
+const toUse = 'football'
