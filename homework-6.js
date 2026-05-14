@@ -30,21 +30,21 @@ console.log(car)
 
 // Создание функции проверки макс. скорости
 
-function compare(car) {
+function addMaxSpeed(car) {
   if (car.maxSpeed === undefined) {
     car.maxSpeed = 220
 }
 }
 
-compare(car)
+addMaxSpeed(car)
 
 // Написаник функции, которая получает первым аргументом - объект, а вторым - свойство объекта которое нужно вывести и выводит его значение
 
-function value(obj,propName) {
+function printProperty(obj,propName) {
   console.log(obj[propName])
 }
 
-value(car,'color')
+printProperty(car,'color')
 
 // Массив, который содержит названия продуктов
 
@@ -80,7 +80,7 @@ console.log(...garage, ...xiaomiCars)
 
 function checkRareness(allCars){
   return allCars.map ((car) => {
-    const answer = car.year <= 2000 ? "Yes" : "No";
+    const answer = car.year <= 2000;
     return {
       ...car,
       isRare: answer
