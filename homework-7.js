@@ -1,7 +1,7 @@
 // Создали массив чисел и получили числа начиная с 5
 
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-const newNumbers = numbers.slice (4, 10);
+const newNumbers = numbers.filter(numbers => numbers >= 5);
 console.log(newNumbers)
 
 // Создали массив строк с проверкой на определенную сущность
@@ -12,10 +12,10 @@ console.log(isQwenHere)
 
 // Написал функцию, которая аргументом будет принимать массив и изменять его порядок на противоположный
 
-const revNumbers = numbers.reverse();
-const revAi = ai.reverse();
-console.log(revNumbers)
-console.log(revAi)
+const reversedNumbers = (numbers) => numbers.reverse();
+const reversedAi = (ai) => ai.reverse()
+console.log(reversedNumbers(numbers))
+console.log(reversedAi(ai))
 
 // Добавление массива по ссылке через файл 'comment.js'
 
@@ -26,7 +26,7 @@ import { comExample } from "./comments.js"
 const filteredComments = comExample.filter(comment => comment.email.includes('.com'));
 console.log(filteredComments)
 
-// Перебрал массив таким образом, что бы пользователи с id меньше или равно 5 имели postId: 2, а те, у кого id больше 5, имели postId: 1
+// Перебрал массив таким образом что бы пользователи с id меньше или равно 5 имели postId: 2, а те, у кого id больше 5, имели postId: 1
 
 const changedPostId = comExample.map(comment => comment.id <= 5 ? ({...comment, postId: 2}) : ({...comment, postId:1}));
 console.log(changedPostId)
@@ -53,5 +53,7 @@ console.log(emailsWithMap)
 
 // Перебрал массив и преоброзовал его к строке
 
-const emailsStringWithJoin = comExample.map(comment => comment.email).join(', ');
-console.log(emailsStringWithJoin)
+const emailsWithString = comExample.map(comment => comment.email).toString();
+const emailsWithJoin = comExample.map(comment => comment.email).join(', ')
+console.log(emailsWithString)
+console.log(emailsWithJoin)
