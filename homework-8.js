@@ -5,6 +5,15 @@ import { productCards } from "./product-cards.js";
 const cardTemplate = document.querySelector("#product-card-template")
 const cardWrapper = document.querySelector(".product-card__wraper")
 
+// Вывели словарь в консоль методом reduce
+
+const productDictionary = productCards.reduce((acc, product) => {
+  acc[product.title] = product.descr;
+  return acc;
+}, {});
+
+console.log(productDictionary);
+
 // Функция-конвейер для отрисовки карточек
 
 function renderCards(productCards, count) {
@@ -41,8 +50,7 @@ currentProduct.compound.forEach(function(ingredient) {
 });
 
 cardWrapper.append(cardClone);
-}
-}
+}}
 
 // Функция инициализации (старт программы) и защита ввода
 
@@ -50,8 +58,8 @@ function init() {
   const count = +prompt('Сколько карточек отобразить от 1 до 5?');
 
 
-if (count < 1 || count > 5 || isNaN(count)) {
-  alert('Неверное число! Пожалуйста, введите цифру от 1 до 5.');
+if (count < 1 || count > 5 || !Number.isInteger(count)) {
+  alert('Неверное число! Пожалуйста, введите число от 1 до 5.');
   return;
 }
 
